@@ -24,7 +24,7 @@
 ---
 <h4 id="BAT">BAT</h4>
 
-*	<h5 id="Combine">合并:</h5>
+*	<h5 id="Combine">合并文件:</h5>
 ```Bash
 @echo off
 	copy /b 000.ts+001.ts+002.ts+003.ts+004.ts 005.ts
