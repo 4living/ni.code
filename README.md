@@ -12,6 +12,9 @@
 	*	[Copy](#Copy)
 	*	[Xcopy](#Xcopy)
 	*	[Hash](#Hash)
+*	[**IPV6**](#IPV6)
+	*	[关闭IPV6接口](#Clsipv6)
+	*	[还原IPV6隧道](#Rstipv6)
 *	[**VB**](#VB)
 	*	[CommonDialog Save](#cmdSave)
 *	[**VBA**](#VBA)
@@ -79,6 +82,22 @@ mklink /j "X:\...\..." "Y:\...\..."
 *	<h5 id="Xcopy">Xcopy:</h5>
 ```CMD
 xcopy A\*.* B: /s /h /d /y
+```
+
+---
+<h4 id="IPV6">IPV6</h4>
+
+*	<h5 id="Clsipv6">关闭IPV6接口：</h5>
+```Bash
+netsh interface teredo set state disable 
+netsh interface 6to4 set state disabled 
+netsh interface isatap set state disabled 
+```
+*	<h5 id="Rstipv6">还原IPV6隧道：</h5>
+```Bash
+netsh interface teredo set state disable 
+netsh interface 6to4 set state disabled 
+netsh interface isatap set state disabled 
 ```
 ---
 <h4 id="VB">VB</h4>
