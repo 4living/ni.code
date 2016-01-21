@@ -30,14 +30,14 @@
 	copy /b 000.ts+001.ts+002.ts+003.ts+004.ts 005.ts
 pause
 ```  
-*	<h5 id="Delete">删除:</h5>
+*	<h5 id="Delete">删除关键字:</h5>
 ```Bash
 @echo off& setlocal enabledelayedexpansion
 for /f "delims=" %%1 in ('dir /a /b') do (set wind=%%1
 	ren "%%~1" "!wind:关键字=!")
 pause
 ```
-*	<h5 id="Replace">替换:</h5>
+*	<h5 id="Replace">替换关键字:</h5>
 ```Bash
 @echo off
 for /f "delims=" %%i in ('dir/b/a-d *目标*')do (set f=%%i
