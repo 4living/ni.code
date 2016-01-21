@@ -7,6 +7,7 @@
 	*	[命名文件](#Delete)
 		*	[删除关键字](#Delete)
 		*	[替换关键字](#Replace)
+	*	[新建文件夹](#Md)
 *	[**CMD**](#CMD)
 	*	[Copy](#Copy)
 	*	[Xcopy](#Xcopy)
@@ -44,6 +45,17 @@ for /f "delims=" %%i in ('dir/b/a-d *目标*')do (set f=%%i
     echo.%%i
     call set f=%%f:目标=替换%%
     call ren "%%i" "%%f%%")
+pause
+```
+
+*	<h5 id="Md">新建文件夹:</h5>
+```Bash		
+@echo off
+cd\ 
+md A:\...\[file name]
+md B:\...\[file name]
+···
+md X:\...\[file name]
 pause
 ```
 
