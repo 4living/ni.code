@@ -12,6 +12,8 @@
 	*	[Copy](#Copy)
 	*	[Xcopy](#Xcopy)
 	*	[Hash](#Hash)
+*	[**VB**](#VB)
+	*	[CommonDialog Save](#cmdSave)
 *	[**VBA**](#VBA)
 	*	[Excel](#CBAS)
 		*	[合并所有工作表](#CBAS)
@@ -78,6 +80,24 @@ mklink /j "X:\...\..." "Y:\...\..."
 ```CMD
 xcopy A\*.* B: /s /h /d /y
 ```
+---
+<h4 id="VB">VB</h4>
+*	<h5 id="cmdSave">CommonDialog Save：</h5>
+```vb
+Private Sub cmdSave_Click()
+On Error GoTo userCanceled
+    With dlg
+        .FileName = "result"
+        .InitDir = App.Path
+        .CancelError = True
+        .Filter = "文本文件(*.txt)|*.txt"
+        .ShowSave
+    End With
+    'Text1.Text = CommonDialog1.FileName
+userCanceled:
+End Sub
+```
+
 ---
 <h4 id="VBA">VBA</h4>
 
