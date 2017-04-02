@@ -8,6 +8,7 @@
 		*	[删除关键字](#Delete)
 		*	[替换关键字](#Replace)
 	*	[新建文件夹](#Md)
+	*	[新建连续文件夹并复制文件](#Md&Copy)
 *	[**CMD**](#CMD)
 	*	[Copy](#Copy)
 	*	[Xcopy](#Xcopy)
@@ -38,6 +39,13 @@
 	copy /b 000.ts+001.ts+002.ts+003.ts+004.ts 005.ts
 pause
 ```  
+
+```Bash
+@echo off
+	cd.>文件名.txt
+	for /f "tokens=*" %%i in ('dir/on/b *.txt') do type "%%i">>文件名.txt
+pause
+```  
 *	<h5 id="Delete">删除关键字:</h5>
 ```Bash
 @echo off& setlocal enabledelayedexpansion
@@ -63,6 +71,17 @@ md A:\...\[file name]
 md B:\...\[file name]
 ···
 md X:\...\[file name]
+pause
+```
+
+*	<h5 id="Md&Copy">新建连续文件夹并复制文件:</h5>
+```Bash		
+@echo off
+for /l %%k in (start_number,step,end_number) do (
+	md %%k
+	copy /y combine.bat %%k
+	copy /y result.xlsx %%k
+)
 pause
 ```
 
