@@ -49,14 +49,16 @@ pause
 *	<h5 id="Delete">删除关键字:</h5>
 ```Bash
 @echo off& setlocal enabledelayedexpansion
-for /f "delims=" %%1 in ('dir /a /b') do (set wind=%%1
+for /f "delims=" %%1 in ('dir /a /b') do (
+	set wind=%%1
 	ren "%%~1" "!wind:关键字=!")
 pause
 ```
 *	<h5 id="Replace">替换关键字:</h5>
 ```Bash
 @echo off
-for /f "delims=" %%i in ('dir/b/a-d *目标*')do (set f=%%i
+for /f "delims=" %%i in ('dir/b/a-d *目标*')do (
+	set f=%%i
     echo.%%i
     call set f=%%f:目标=替换%%
     call ren "%%i" "%%f%%")
@@ -66,11 +68,11 @@ pause
 *	<h5 id="Md">新建文件夹:</h5>
 ```Bash		
 @echo off
-cd\ 
-md A:\...\[file name]
-md B:\...\[file name]
-···
-md X:\...\[file name]
+	cd\ 
+	md A:\...\[file name]
+	md B:\...\[file name]
+	···
+	md X:\...\[file name]
 pause
 ```
 
