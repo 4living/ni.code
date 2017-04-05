@@ -28,6 +28,8 @@
 *	[**VBS**](#VBS)
 *	[**Word**](#Word)
 	*	[查找/替换](#Find&Replace)
+*	[**Excel**](#Excel)
+	*	[单元格格式](#CellFormat)
 
 
 ---
@@ -264,3 +266,12 @@ CreateObject("SAPI.SpVoice").Speak "德玛西亚"
 	*	**数字**：`[数字-数字]`
 	*	**组合**：`[a-z/A-Z/1-9]`
 	*	**本体**：`^&`
+
+---
+<h4 id="Excel">Excel</h4>
+
+*	<h5 id="CellFormat">批量修改A列单元格部分内容的格式：</h5>
+把公式下拉至B5，复制B1：B5，调出剪贴版，单击剪贴板的内容，这时单击右键—选择性粘贴—Unicode 文本—确定
+```html
+="<table><tr><td><font size=16 face=隶书 color=red>"&SUBSTITUTE(A1,RIGHT(A1,3),"")&"</font>"&RIGHT(A1,3)
+```
